@@ -1,0 +1,160 @@
+<!DOCTYPEhtml >
+< html  lang =" es " >
+< cabeza >
+    < juego de caracteres meta  =" UTF-8 " >
+    < meta  http-equiv =" X-UA-Compatible " content =" IE=edge " >
+    < meta  name =" viewport " content =" ancho=ancho-del-dispositivo, escala-inicial=1.0 " >
+    < título > Documento </ título >
+</ cabeza >
+< cuerpo >
+    < guión >
+        //===============================CODIGO DE CALCULADORA crsitian wesly mendoza nuñez========= ===========================//
+
+        sea  ​​tipo_Op  =  0 ; //tipo de operación
+        sea   ​​tomav  =  0  ; //Si |No
+        sea   ​​numerosa  =  [ 0 , 0 , 0 ] ; //0 = N1|1 = N2|2 = R|
+
+        Mostrar_Opciones ( ) ;
+        función  Mostrar_Opciones ( )
+        {
+
+            tipo_Op =  prompt ( '¿Qué tipo de operación realizará?.\n1.Suma\n2.Resta\n3.Multiplicacion\n4.Division\n5.Potencia' , '' ) ;
+            numerosa [ 0 ]  = prompt ( '¿Cual es el primer número? :' , '' ) ;
+            consola _ log ( numerosa [ 0 ] )
+            numerosa [ 1 ]  = prompt ( '¿Cual es el segundo número?' , '' ) ;
+            consola _ log ( numerosa [ 1 ] )
+            Calcular ( ) ;
+            tomav  = prompt ( 'Desea hacer otra operacion? S| N' , '' ) ;
+            Ver_Op ( tomav ) ;
+
+        }
+        función  Realizar_Calculo ( t , a , b )
+        {
+          
+           cambiar ( t )
+           {
+                caso  1 : return  numerosa [ 2 ]  =  a + b ;
+                caso  2 : return   numerosa [ 2 ]  =  a - b ;
+                caso  3 : return   numerosa [ 2 ]  =  a * b ;
+                caso  4 : return   numerosa [ 2 ]  =  a / b ;
+                caso  5 : devuelve   numerosa [ 2 ]  =  Math . pow ( a , b ) ;
+           }
+        
+        }
+         calculadora de función ( )
+            {
+                let  c  =  parseInt ( numerosa [ 0 ] ) ;
+                sea  ​​d  =  parseInt ( numerosa [ 1 ] ) ;
+                sea  ​​e  =  parseInt ( tipo_Op ) ;
+                sea  ​​m  =   Realizar_Calculo ( e , c , d ) ;
+                return   alert ( "El resultado de la operacion: " + m ) ;
+            }
+      
+        //
+        función  Ver_Op ( m )
+        {
+            interruptor ( m )
+            {
+                caso  'S' , 'Si' , 'SI' , 'si' , 's' :
+                {
+                    Mostrar_Opciones ( ) ;
+                    romper ;
+                }
+                caso  'n' , 'No' , 'NO' , 'no' , 'N' :
+                {
+                    documento _ write ( 'Si quiere volver a usar recargue\nCalculadora Eduardo Jose MTZ R.' ) ;
+                    romper ;
+                }
+                predeterminado :
+                {
+                    tomav  =  prompt ( 'Sistema: Opcion inválida\n |SI|: Si quiere hacer otra operacion\n| NO| Si desea salir' , '' ) ;
+                    Ver_Op ( tomav ) ;
+                    romper ;
+                }
+            }
+        }
+
+        //======================================PROBLEMAS ACTIVIDAD VIDEO 35===== ================================================== =============
+                
+  /*      
+    1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+    2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+    3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+    4) Programa una función que repite un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+    5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+    6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+    7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+    8) Programa una función que elimina cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá "1, 2, 3, 4 y 5.
+    */
+
+   
+    // 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+    función  contar_texto ( verbo  =  "" )
+    {
+        consola _ log ( `La palabra   ${ verb } posee ${ verb . length } caracetéres` ) ;
+    }
+    contar_texto ( "Hola mundo" ) ;
+    // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+    función  cotar_texto ( palabra  =  "" )
+    {
+        consola _ log ( palabra . rebanada ( 0 , 4 ) ) ;
+    }
+    cotar_texto ( "Hola mundo" ) ;
+    // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+    función  separador ( texto ) 
+    {
+        consola _ registro ( texto . split ( ' ' ) ) ;
+    }
+    separador ( "hola que tal" ) ;
+    // 4) Programa una función que repite un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+    función  repertir_ciclo ( info , veces )
+    {
+        consola _ log ( info . repetir ( veces ) ) ;
+    }
+    repertir_ciclo ( "Hola mundo" , 3 ) ;
+    //5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+    función  inversa ( info )
+    {
+        devolver  información . dividir ( "" ) . inversa ( ) . unirse ( "" ) ;
+    }
+    consola _ log ( reverse ( "Hola mundo" ) ) ;
+    // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+
+    función  Buscar_Vtexto ( info ,  info2 ) 
+    {
+            let  ctext  =  info . dividir ( " " ) ;
+            dejar  contador  =  0 ;
+            for  ( sea  i  =  0 ;  i  <  ctexto . longitud ;  i ++ )  {
+                if  ( ctexto [ i ]  ==  info2 ) 
+                {
+                    contador ++ ;
+                }
+            }
+            consola _ log ( `Se encontro la palabra ${ info2 }  ${ counter } veces` ) ;
+    }    
+    Buscar_Vtexto ( "hola mundo adios mundo" ,  "mundo" ) ;   
+    //7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+    función  verificarp ( texto ) 
+    {
+        const  reservada  =  texto . dividir ( "" ) . inversa ( ) . unirse ( "" ) ;
+        if (  reservada  ===  texto ) consola . log ( `La palabra   ${ texto } es palíndromo` ) ;
+        más 
+        consola _ log ( `La palabra   ${ texto } no es palíndromo` ) ;
+    }
+    verificarp ( "salas" ) ;
+    //8) Programa una función que elimina cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá "1, 2, 3, 4 y 5.
+
+    funcion  Convertir_Texto ( convertir ,  dato ) 
+    {
+        dejar  apartar  =  convertir . dividir ( "," ) ;
+        let  resultb  =  "" ;
+        for  ( sea  i  =  0 ;  i  <  apartar . longitud ;  i ++ ) 
+        {
+            resultadob  +=  apartar [ yo ] . reemplazar ( dato ,  "" ) ;
+        }
+        consola _ registro ( resultadob ) ;
+    }
+    Convertir_Texto ( "xyz1, xyz2, xyz3, xyz4, y xyz5" ,  "xyz" ) ;
+    </ guión >
+</ cuerpo >
+</ html >

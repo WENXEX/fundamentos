@@ -1,0 +1,132 @@
+<!DOCTYPEhtml >
+< html  lang =" es " >
+< cabeza >
+</ cabeza >
+    < juego de caracteres meta  =" UTF-8 " >
+    < meta  http-equiv =" X-UA-Compatible " content =" IE=edge " >
+    < meta  name =" viewport " content =" ancho=ancho-del-dispositivo, escala-inicial=1.0 " >
+    < title > Calculadora fundamentos </ title >
+    < cuerpo >
+    < centro > < h2 > < p  estilo =" color:#FF0000 " ; > Calculadora básica < br > Eduardo José Martínez Ruiz </ p > </ h2 > </ centro >
+    < acción de formulario  ="" >
+        < borde de la tabla  =" 3 " alinear =" centro " >
+            < tr >
+                < td >
+                    Ingrese el número 1:
+                    < tipo de entrada  = " número " nombre = " bon1 " id = " bon1 " >
+                </ td >
+            </ tr >
+            < tr >
+                < td >
+                    Ingrese el número 2:
+                    < tipo de entrada  = " número " nombre = " bon2 " id = " bon2 " >
+                </ td >
+            </ tr >
+            < tr >
+                
+                < td >
+                    < centro > ¿Qué tipo de operación se realizará?: </ centro >
+                    < br >
+                    1.Suma
+                    < br >
+                    2. Resta
+                    < br >
+                    3.Multiplicacion
+                    < br >
+                    4.División
+                    < tipo de entrada  = " número " nombre = " bon3 " id = " bon3 " >
+                </ td >
+            </ tr >
+            < tr >
+                < td >
+                    < tipo de entrada  = " botón " valor =" Calcular " onclick = Calcular(); >
+                </ td >
+            </ tr >
+        </ mesa >
+    </ formulario >
+   
+    < guión >
+        
+         cálculo de funciones ( e1 , tv , e2 ) 
+        {
+            dejar  resistir  =  nulo ;
+            interruptor ( televisión )
+            {
+                caso  1 : retorno  resil  =  e1 + e2 ;
+                caso  2 : retorno   resil  =  e1 - e2 ;
+                caso  3 : retorno    resil  =  e1 * e2 ;
+                caso  4 : retorno   resil  =  e1 / e2 ;
+            }
+        }
+         calculadora de función ( )
+        {
+            let  a  =  parseInt ( documento . getElementById ( "bon1" ) . valor ) ;
+            let  b  =  parseInt ( documento . getElementById ( "bon2" ) . valor ) ;
+            let  c  =  parseInt ( documento . getElementById ( "bon3" ) . valor ) ;
+            sea  ​​m  =   calculo ( a , c , b ) ;
+            volver   alerta ( "El valor es: " + m ) ;
+
+        
+        }
+      
+
+  
+      
+        
+       
+
+
+    </ guión >
+    < centro > < h3 > Fórmula Cuadrática </ h3 > </ centro >
+    < acción de formulario  ="" >
+        < borde de la tabla  =" 2 " alinear =" centro " >
+            < tr >
+                < td >
+                    Ingrese el valor a:
+                    < tipo de entrada  = " número " nombre = " b1 " id = " b1 " >
+                </ td >
+            </ tr >
+            < tr >
+                < td >
+                    Ingrese el valor b:
+                    < tipo de entrada  = " número " nombre = " b2 " id = " b2 " >
+                </ td >
+            </ tr >
+            < tr >
+                < td >
+                    Ingrese el valor c:
+                    < tipo de entrada  = " número " nombre = " b3 " id = " b3 " >
+                </ td >
+            </ tr >
+            < tr >
+                < td >
+                    < tipo de entrada  = " botón " valor =" Calcular " onclick =" Cuadratica_Cal(); " >
+                </ td >
+            </ tr >
+        </ mesa >
+    </ formulario >
+    < guión >
+        //
+    función  Cuadrática_Cal ( ) 
+    {
+        let  a  =  parseInt ( documento . getElementById ( "b1" ) . valor ) ;
+        let  b  =  parseInt ( documento . getElementById ( "b2" ) . valor ) ;
+        let  c  =  parseInt ( documento . getElementById ( "b3" ) . valor ) ;
+        sea  ​​parte1  =  ( - 1 ) * b ;
+        let  parte2  =  Matemáticas . pow ( b , 2 ) - ( 4 * a * c ) ;
+        sea  ​​parte3  =  2 * a ;
+        si  ( parte2  >  0 )  {
+            let  x1  =  ( parte1  -  Math . sqrt ( parte2 ) ) / parte3 ;
+            let  x2  =  ( parte1  +  Math . sqrt ( parte2 ) ) / parte3 ;
+            alert ( "Los valores de x son: " +  parseFloat ( x1 )  +  " y "  + parseFloat ( x2 ) ) ;
+        }  más  {
+            sea  ​​x3  =  parte1 / parte3 ;
+            alert ( "El valor de x es: " +  parseFloat ( x3 ) ) ;
+        }
+    }
+    </ guión >
+
+
+    
+</ cuerpo >
+</ html > 
